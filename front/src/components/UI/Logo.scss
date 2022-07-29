@@ -1,0 +1,11 @@
+.logo {
+	flex: 1 1 50%;
+	font-family: Heebo;
+	font-size: 26px;
+	font-weight: 600;
+	text-align: left;
+	&:after{
+		font-size: 20px;
+		content: 'od';
+	}
+}

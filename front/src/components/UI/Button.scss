@@ -1,0 +1,14 @@
+.btn-link {
+    padding: 6px;
+    margin-left: 20px;
+    font-size: 16px;
+    font-family: Heebo;
+    color: #fff;
+    background: #1d9bf0;
+    border-radius: 2px;
+    &:hover{
+        color: #1d9bf0;
+        outline: 1px solid #1d9bf0;
+        background-color:#fff;
+    }
+}
