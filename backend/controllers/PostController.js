@@ -53,7 +53,6 @@ export const getOne = async (req, res) => {
             },
             (err, doc) => {
                 if(err) {
-                    console.log(error);
                     return res.status(500).json({
                         message: 'failed to retrieve post'
                     });

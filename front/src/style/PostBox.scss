@@ -1,0 +1,31 @@
+.post-box{
+    margin: 15px 0 ;
+    padding: 0 16px;
+    form{
+        width: 100%;
+    }
+
+    &__avatar{
+        display: inline-block;
+    }
+
+    &__input{
+        display: flex;
+        flex: 1 1 100%;
+        gap: 10px;
+        margin-bottom: 10px;        
+    } 
+
+    &__input-field{
+        flex: 1 1 100%;
+        font-size: 20px;
+        font-family: Heebo;
+        resize: none;
+    }
+
+    &__buttons{
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+    }
+}

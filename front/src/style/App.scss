@@ -1,24 +1,14 @@
+@import url('../components/UI/Button.scss');
+
 .App {
-  display: flex;
-  flex-direction: column;
 }
 
-.container {
-  margin: 0 auto;
-	max-width: 1200px;
-	padding: 0 20px;
+body{
+  --color: #50b7f5;
+  --color-bg: #e8f5fe;
 }
 .row {
   display: inline-flex;
-  justify-content: space-between;
   width: 100%;
 }
 
-.navbar { 
-  padding: 20px 0;
-  border-bottom: 1px solid rgb(219,219,219);
-  
-  &__row{
-    align-items: center;
-  }
-}
