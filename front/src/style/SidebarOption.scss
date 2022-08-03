@@ -1,0 +1,25 @@
+.sidebar-option{
+    align-items: center;
+    cursor: pointer;
+    a{
+        display: inline-flex;
+        padding: 10px;
+        color: #111;
+        h2{
+            display: inline;
+            margin-left: 10px;
+            font-family: Heebo;
+            font-weight: 800;
+            font-size: 20px;
+        }
+        &:hover{
+            background-color: var(--color-bg);
+            color: var(--color);
+            border-radius: 20px;
+            transition: color 100ms ease-out;
+        }
+    }
+   
+}
+
+

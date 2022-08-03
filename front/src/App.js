@@ -1,21 +1,29 @@
 import './style/App.scss';
-import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import Header from './components/Header';
+import Feed from './components/Feed';
+import { Container } from '@mui/system';
+// import { useState } from 'react';
+// import { useEffect } from 'react';
 
 function App() {
-  const [date, setDate] = useState('');
+  // const [date, setDate] = useState('');
 
-  useEffect(() => {
-    fetch('/api')
-    .then((response) => response.json())
-    .then(response => setDate(response.message))
-  }, []);
+  // useEffect(() => {
+  //   fetch('/api')
+  //   .then((response) => response.json())
+  //   .then(response => setDate(response.message))
+  // }, []);
   return (
     <div className="App">
-     <Navbar></Navbar>
-      <Sidebar></Sidebar>
+      <Header></Header> 
+      <Container maxWidth="lg">
+        <div className="row">
+          <Sidebar class='sidebar'/>
+          <Feed/>
+        </div>  
+      </Container>
+
     </div>
   );
 }

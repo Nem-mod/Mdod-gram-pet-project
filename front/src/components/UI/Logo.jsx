@@ -1,9 +1,6 @@
-import React, { Component } from 'react'
 import './Logo.scss'
-export default class Logo extends Component {
-  render() {
+export default function Logo() {
     return (
       <div className='logo'>MD</div>
     )
-  }
 }
