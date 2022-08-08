@@ -1,0 +1,99 @@
+.post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.post__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  padding-left: 10px;
+}
+
+.post__header {
+  overflow: hidden;
+}
+
+.post__description {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.post__img {
+  margin-top: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.post__img img {
+  width: 100%;
+}
+
+.post__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.post__tags li a {
+  color: var(--color);
+}
+
+.post__activity {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.post__activity li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.post__activity .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 34px;
+  width: 34px;
+}
+
+.post__activity_c:hover {
+  cursor: pointer;
+  color: var(--color);
+}
+
+.post__activity_c:hover .icon {
+  border-radius: 30px;
+  background-color: var(--color-bg);
+}
+
+.post__activity_l:hover {
+  cursor: pointer;
+  color: #ff1b58;
+}
+
+.post__activity_l:hover .icon {
+  border-radius: 30px;
+  background-color: #FF82A3;
+}
+/*# sourceMappingURL=Post.css.map */

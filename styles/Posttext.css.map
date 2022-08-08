@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,UAAU,EAAE,IAAI;CACnB",
+    "sources": [
+        "../front/src/style/Posttext.scss"
+    ],
+    "names": [],
+    "file": "Posttext.css"
+}

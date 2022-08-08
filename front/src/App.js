@@ -1,26 +1,32 @@
 import './style/App.scss';
+import React from 'react'
 import Sidebar from './components/Sidebar';
-import Header from './components/Header';
-import Feed from './components/Feed';
+import Header from './components/Header/Header';
+import Feed from './Pages/Feed/Feed';
+import { Routes, Route } from 'react-router-dom';
 import { Container } from '@mui/system';
-// import { useState } from 'react';
-// import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectIsAuth, fetchAuthMe } from './redux/slices/auth'
+
 
 function App() {
-  // const [date, setDate] = useState('');
 
-  // useEffect(() => {
-  //   fetch('/api')
-  //   .then((response) => response.json())
-  //   .then(response => setDate(response.message))
-  // }, []);
+  const dispatch = useDispatch();
+  const isAuth = useSelector(selectIsAuth)
+  React.useEffect(() => {
+    dispatch(fetchAuthMe());
+  }, [])
   return (
     <div className="App">
-      <Header></Header> 
+      <Header/>
       <Container maxWidth="lg">
+        
         <div className="row">
           <Sidebar class='sidebar'/>
-          <Feed/>
+          <Routes>
+              <Route path="/home/*" element={<Feed/>}/>
+          </Routes>
+          
         </div>  
       </Container>
 

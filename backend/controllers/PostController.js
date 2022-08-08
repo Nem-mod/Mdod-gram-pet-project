@@ -3,14 +3,14 @@ import PostModel from "../models/Post.js"
 
 export const createPost = async (req, res) => {
     try {
+        console.log(req.body);
         const doc = new PostModel({
             user: req.userId,
-            tittle: req.body.tittle,
             text: req.body.text,
-            imgURL: req.body.imgURL,
+            imgUrls: req.body.imgUrls,
             tags: req.body.tags
         });
-
+        console.log(doc);
         const post = await doc.save();
         res.json(post);
     } catch (error) {
@@ -29,7 +29,26 @@ export const getAll = async (req, res) => {
                 message: 'No posts'
             });
         }
+        
         res.json(posts);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            message: 'failed to retrieve posts'
+        });
+    }
+}
+
+export const getLastTags = async (req, res) => {
+    try {
+        const posts = await PostModel.find().limit(2).exec();
+
+        const tags = posts
+            .map(obj => obj.tags)
+            .flat()
+            .slice(0,5);
+
+        res.json(tags);
     } catch (error) {
         console.log(error);
         res.status(500).json({
@@ -116,9 +135,8 @@ export const update = async (req, res) => {
             }, 
             {
                 user: req.userId,
-                tittle: req.body.tittle,
                 text: req.body.text,
-                imgURL: req.body.imgURL,
+                imgUrls: req.body.imgUrls,
                 tags: req.body.tags
             },
         );

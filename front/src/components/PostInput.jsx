@@ -1,12 +1,11 @@
-import inputResize from '../API/inputResize.js'
 
-export default function PostInput() {
+export default function PostInput(props) {
   return (
     <textarea 
             placeholder="What's happening" 
             maxLength = "300"
             className="post-box__input-field" 
-            onChange={(event) => inputResize(event, '60px')} >
-          </textarea>
+            onChange={props.onChange}>
+    </textarea>
   )
 }

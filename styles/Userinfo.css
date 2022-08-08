@@ -1,0 +1,26 @@
+.userinfo {
+  margin-top: 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.userinfo__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.userinfo__name a {
+  color: #111;
+}
+
+.userinfo__name a:hover {
+  text-decoration: underline;
+}
+
+.userinfo__link {
+  font-size: 16px;
+  color: var(--color);
+}
+/*# sourceMappingURL=Userinfo.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACL,IAAI,EAAE,OAAO;EACb,WAAW,EAAE,KAAK;EAClB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,IAAI;CAKhB;;AAVD,AAMC,KANI,AAMH,MAAM,CAAA;EACN,SAAS,EAAE,IAAI;EACf,OAAO,EAAE,IAAI;CACb",
+    "sources": [
+        "../front/src/components/UI/Logo.scss"
+    ],
+    "names": [],
+    "file": "Logo.css"
+}

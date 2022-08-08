@@ -1,0 +1,31 @@
+.sidebar-option {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar-option a {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 10px;
+  color: #111;
+}
+
+.sidebar-option a h2 {
+  display: inline;
+  margin-left: 10px;
+  font-family: Heebo;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.sidebar-option a:hover {
+  background-color: var(--color-bg);
+  color: var(--color);
+  border-radius: 20px;
+  -webkit-transition: color 100ms ease-out;
+  transition: color 100ms ease-out;
+}
+/*# sourceMappingURL=SidebarOption.css.map */
