@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAA;EACD,IAAI,EAAE,GAAG;EACT,aAAa,EAAE,IAAI;EACnB,QAAQ,EAAE,MAAM;EAIhB,OAAO,EAAE,MAAM;EACf,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,gBAAgB;CACrC;;AATD,AAII,KAJC,AAIA,mBAAmB,CAAA;EAChB,OAAO,EAAE,IAAI;CAChB;;AAML,AAAA,YAAY,CAAA;EACR,MAAM,EAAE,MAAM;EACd,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;EAChB,OAAO,EAAE,MAAO;CACjB",
+    "sources": [
+        "../front/src/Pages/Feed/feed.scss"
+    ],
+    "names": [],
+    "file": "feed.css"
+}

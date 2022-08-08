@@ -1,0 +1,21 @@
+.feed {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  border-radius: 30px;
+  overflow: scroll;
+  padding: 10px 0;
+  border: 1px solid var(--color-bor);
+}
+
+.feed::-webkit-scrollbar {
+  display: none;
+}
+
+.feed-header {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0 18px;
+}
+/*# sourceMappingURL=feed.css.map */

@@ -64,7 +64,7 @@ export const login = async (req, res) => {
             return res.status(404).json({
                 message: 'Incorrect login or password'
             })
-        }
+        }   
 
         const token = jwt.sign(
             {

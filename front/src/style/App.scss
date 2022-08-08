@@ -1,14 +1,20 @@
 @import url('../components/UI/Button.scss');
 
 .App {
+  font-family: Heebo;
 }
-
+.flex {
+  display: flex;
+}
 body{
   --color: #50b7f5;
   --color-bg: #e8f5fe;
+  --color-bor: #b5e0ff;
 }
 .row {
   display: inline-flex;
   width: 100%;
 }
-
+a{
+  color: #e8f5fe;
+}

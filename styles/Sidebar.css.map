@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACL,IAAI,EAAE,IAAI;EACV,OAAO,EAAE,IAAI;EACb,GAAG,EAAE,GAAG;EACR,cAAc,EAAE,MAAM;EACtB,YAAY,EAAE,IAAI;EAClB,OAAO,EAAE,MAAM;CAEhB",
+    "sources": [
+        "../front/src/style/Sidebar.scss"
+    ],
+    "names": [],
+    "file": "Sidebar.css"
+}

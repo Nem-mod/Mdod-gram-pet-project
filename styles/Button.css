@@ -1,0 +1,20 @@
+.button {
+  display: inline-block;
+  height: 40px !important;
+  color: #fff !important;
+  font-family: Heebo !important;
+  font-weight: 600 !important;
+  background-color: var(--color) !important;
+  border-radius: 30px !important;
+}
+
+.button:hover {
+  color: var(--color) !important;
+  outline: 1px solid #1d9bf0 !important;
+  background-color: var(--color-bg) !important;
+}
+
+.header__button {
+  margin-left: 10px !important;
+}
+/*# sourceMappingURL=Button.css.map */
