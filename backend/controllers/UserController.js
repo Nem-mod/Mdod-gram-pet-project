@@ -47,7 +47,6 @@ export const register = async (req, res) => {
     };
 }
 
-
 export const login = async (req, res) => {
     try {
         const user = await UserModel.findOne({ email: req.body.email})
@@ -108,3 +107,34 @@ export const getUser = async (req, res) => {
         });
     }
 };
+
+export const editUser = async (req, res) => {
+    try {
+        const userId = req.params.id;
+        const password = req.body.password;
+        const salt = await bcrypt.genSalt(10);
+        const hash = await bcrypt.hash(password, salt);
+
+        await PostModel.updateOne(
+            {
+                _id: userId,
+            }, 
+            {
+                email: req.body.email,
+                userName: req.body.userName,
+                avatarURL: req.body.avatarURL,
+                userBio: req.body.userBio,
+                passwordHash: hash
+            },
+        );
+        res.json({
+            message: "success"
+        });
+    } 
+    catch (error) {
+        console.log(error);
+        res.status(500).json({
+            message: 'Edit profile error'
+        });
+    };
+}

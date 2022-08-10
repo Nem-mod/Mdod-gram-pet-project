@@ -1,12 +1,12 @@
-import Logo from "../UI/Logo"
+import Logo from "../UI/Logo/Logo"
 import { AppBar, Button, Toolbar} from "@mui/material"
 import { Container } from "@mui/system"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import SignupModal from "../modal/SignupModal"
 import LoginModal from "../modal/LoginModal"
 import {useSelector, useDispatch} from 'react-redux'
 import {logout, selectIsAuth, selectUserData } from '../../redux/slices/auth';
-import { Link } from "react-router-dom"
 
 export default function Header() {
   const dispatch = useDispatch();

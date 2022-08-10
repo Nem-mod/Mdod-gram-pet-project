@@ -6,17 +6,19 @@ import TagIcon from '@mui/icons-material/Tag';
 // import MessageIcon from '@mui/icons-material/Message';
 // import BookmarkIcon from '@mui/icons-material/Bookmark';
 // import ListAltIcon from '@mui/icons-material/ListAlt';
+import SettingsApplicationsOutlinedIcon from '@mui/icons-material/SettingsApplicationsOutlined';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
-import '../style/Sidebar.scss'
-import PostModal from './modal/PostModal';
+import PostModal from '../modal/PostModal';
+import styles  from './Sidebar.module.scss'
 
 function Sidebar(props) {
   const [openPost, setOpenPost] = useState(false);
   return (
-    <nav className={props.class}>
+    <nav className={styles.sidebar}>
       {/* {SedebarOptions} */}
       <SidebarOption text='Home' Icon={HomeIcon}/>
       <SidebarOption text='Explore' Icon={TagIcon}/>
+      <SidebarOption text='Settings' Icon={SettingsApplicationsOutlinedIcon}/>
       {/* <SidebarOption text='Notifications' Icon={NotificationsNoneIcon}/> */}
       {/* <SidebarOption text='Messages' Icon={MessageIcon}/> */}
       {/* <SidebarOption text='Bookmarks' Icon={BookmarkIcon}/> */}

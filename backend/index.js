@@ -24,6 +24,7 @@ app.use('/uploads', express.static('./backend/uploads'))
 app.post('/auth/register', registerValidator, handleErrros, UserController.register);
 app.post('/auth/login', loginValidator, handleErrros, UserController.login )
 app.get('/auth/me', checkAuth, UserController.getUser )
+app.patch('/auth/editProfile', checkAuth, handleErrros, UserController.editUser)
 
 
 // Post

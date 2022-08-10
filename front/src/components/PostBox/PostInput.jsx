@@ -1,10 +1,10 @@
-
+import styles from './PostBox.module.scss'
 export default function PostInput(props) {
   return (
     <textarea 
             placeholder="What's happening" 
             maxLength = "300"
-            className="post-box__input-field" 
+            className={styles.inputField}
             onChange={props.onChange}>
     </textarea>
   )

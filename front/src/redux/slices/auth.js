@@ -14,6 +14,10 @@ export const fetchRegister = createAsyncThunk('auth/fetchRegister', async (param
     const {data} = await axios.post('/auth/register', params);
     return data
 })
+export const fetchEditProfile = createAsyncThunk('auth/fetchEditProfile', async (params) => {
+    const {data} = await axios.patch('/auth/editProfile', params);
+    return data
+})
 
 
 const initialState = {
