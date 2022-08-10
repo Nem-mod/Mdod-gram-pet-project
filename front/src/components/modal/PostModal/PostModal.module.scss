@@ -1,0 +1,16 @@
+.post-modal{
+    width: 500px;
+    padding: 20px;
+    font-family: Heebo;
+    textarea{
+        resize: none;
+    }
+    textarea::-webkit-scrollbar{
+        display: none;
+    }   
+    .input-field{
+        margin-top: 5px;
+        flex: 1 1 100%;
+        font-size: 20px;
+    }
+}

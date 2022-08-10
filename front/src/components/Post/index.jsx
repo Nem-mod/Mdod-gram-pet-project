@@ -1,10 +1,10 @@
-import { Avatar, Box, IconButton, ImageList, ImageListItem } from '@mui/material'
+import { Avatar, Box, IconButton, ImageList, ImageListItem, stepLabelClasses } from '@mui/material'
 import React from 'react'
 import Userinfo from './Userinfo'
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
-import "../style/Post.scss"
+import styles from "./Post.module.scss"
 import { Link } from 'react-router-dom';
 
 export default function Post({
@@ -20,22 +20,20 @@ export default function Post({
     tags
   }) 
   {
-
   return (
-    <div className='post post-box '>
-      <div className="post__avatar">
+    <div className={styles.post}>
+      <div className={styles.avatar}>
         <Avatar src={imageAvatarUrl}/>
       </div>
-        <Box className='post__body'>
-            <div className="post__header">
+        <Box className={styles.body}>
+            <div className={styles.header}>
               <Userinfo name={userName} ></Userinfo>
-             
-              <div className="post__description">
+              <div className={styles.description}>
                 {text}
               </div>
             </div>
             {imgUrls && (
-              <div className="">
+              <div className={styles.img}>
                 <ImageList cols={3}>
                   {imgUrls.map((item) => (
                     <ImageListItem key={item.img}>
@@ -47,29 +45,27 @@ export default function Post({
                 </ImageList>
               </div>
             )}
-
-
-            <div className="post__footer">
-              { tags && <ul className='post__tags'>
+            <div className={styles.footer}>
+              { tags && <ul className={styles.footer}>
                 {tags.map((name) => (
                   <li key={name}>
                     <Link to={`tags/#${name}`}>#{name}</Link>
                   </li>
               ))}
                 </ul>}
-              <ul className="post__activity">
-                <li className='post__activity_v'>
-                    <RemoveRedEyeOutlinedIcon />
-                    <span>{viewsCount}</span>
+              <ul className={styles.activity}>
+                <li className={styles.activity_v}>
+                    {/* <RemoveRedEyeOutlinedIcon />
+                    <span>{viewsCount}</span> */}
                 </li>
-                <li className='post__activity_c'>
-                  <IconButton className='icon'>
+                <li className={styles.activity_c}>
+                  <IconButton className={styles.icon}>
                     <ChatBubbleOutlineOutlinedIcon/>                      
                   </IconButton> 
                   <span>{commentsCount}</span>
                 </li>
-                <li className='post__activity_l'>
-                    <IconButton className='icon'>
+                <li className={styles.activity_l}>
+                    <IconButton className={styles.icon}>
                       <FavoriteBorderOutlinedIcon />
                     </IconButton>
                     <span>{likesCount}</span>

@@ -1,10 +1,11 @@
 import React from 'react'
-import PostBox from '../../components/PostBox'
-import './feed.scss'
-import Post from '../../components/Post'
+import PostBox from '../../components/PostBox/index'
+import Post from '../../components/Post/index'
 import { useDispatch, useSelector } from 'react-redux'
 import {fetchPosts, fetchTags} from "../../redux/slices/posts"
 import { selectIsAuth } from '../../redux/slices/auth'
+import styles from './Feed.module.scss'
+
 
 
 export default function Feed() {
@@ -18,10 +19,10 @@ export default function Feed() {
   }, [])
 
   return (
-    <div className='feed'>
+    <div >
       
       {/* Header */}
-      <div className='feed-header'>
+      <div className={styles.header}>
        Latest Tweets
       </div>
       {/* PostBox */}

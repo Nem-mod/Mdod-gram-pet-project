@@ -1,8 +1,9 @@
-import './style/App.scss';
+import './styles/App.scss';
 import React from 'react'
-import Sidebar from './components/Sidebar';
-import Header from './components/Header/Header';
-import Feed from './Pages/Feed/Feed';
+import Sidebar from './components/SideBar/index';
+import Header from './components/Header/index';
+import Feed from './Pages/Feed/index';
+import Settings from './Pages/Settings/index';
 import { Routes, Route } from 'react-router-dom';
 import { Container } from '@mui/system';
 import { useDispatch, useSelector } from 'react-redux';
@@ -22,10 +23,17 @@ function App() {
       <Container maxWidth="lg">
         
         <div className="row">
-          <Sidebar class='sidebar'/>
+          <Sidebar/>
+          <div className="content">
           <Routes>
               <Route path="/home/*" element={<Feed/>}/>
+              {isAuth && 
+                <Route path="/settings/*" element={<Settings/>}/>
+              }
+              
           </Routes>
+          
+          </div>
           
         </div>  
       </Container>

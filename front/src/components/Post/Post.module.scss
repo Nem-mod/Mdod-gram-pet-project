@@ -1,29 +1,31 @@
 .post{
-    display: flex   ;
-    &__body{
+    display: flex;
+    padding: 10px 16px;
+    border-top: 3px solid var(--color-bor);
+    .body{
         flex: 1 1 100%;
         padding-left: 10px;
     }
 
-    &__header{
+    .header{
         overflow: hidden;
     }
-    &__description{
+    .description{
         margin-top: 10px;
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 18px;
     }
-    &__img{
-        margin-top: 10px;
-        border-radius: 20px;
+    .img{
+        margin-top: 20px;
         overflow: hidden;
         img{
+        border-radius: 20px;
+
             width: 100%;
         }
         object-fit: cover;
         
     }
-    &__tags{
+    .tags{
         display: flex;
         gap: 10px;
         li{
@@ -32,7 +34,7 @@
             }
         }
     }
-    &__activity{
+   .activity{
         margin-top: 10px;
         display: flex;
         justify-content: space-around;
@@ -49,7 +51,7 @@
             width: 34px;
         }
     }
-    &__activity_c:hover{
+    .activity_c:hover{
         cursor: pointer;
         color: var(--color);
         .icon{
@@ -57,7 +59,7 @@
             background-color: var(--color-bg);
         }
     }
-    &__activity_l:hover{
+    .activity_l:hover{
         cursor: pointer;
         color: #ff1b58;
         .icon{
@@ -65,4 +67,28 @@
             background-color: #FF82A3 ;
         }
     }
+}
+
+.userinfo {
+    margin-top: 5px;
+    display: inline-flex;
+    gap:10px;
+    .name{
+
+        font-size: 18px;
+        font-weight: 600;
+        a{
+            color: #111
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+    .link{
+        font-size: 16px;
+        color: var(--color);
+    }
+}
+.postText{
+    margin-top: 10px;
 }
